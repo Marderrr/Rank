@@ -17,8 +17,8 @@ public class NametagManager {
         player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 
         for (Rank rank : Rank.values()) {
-            Team team = player.getScoreboard().registerNewTeam(rank.getDisplayOrder()+ rank.name());
-            team.setPrefix(rank.getDisplay() + " ");
+            Team team = player.getScoreboard().registerNewTeam(rank.getDisplayOrder() + rank.name());
+            team.setPrefix(rank.getDisplay());
         }
 
         for (Player target : Bukkit.getOnlinePlayers()) {

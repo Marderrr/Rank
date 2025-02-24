@@ -23,7 +23,7 @@ public class RankListener implements Listener {
         Player player = e.getPlayer();
 
         if (!player.hasPlayedBefore()) {
-            ranks.getRankManager().setRank(player.getUniqueId(), Rank.GUEST, true);
+            ranks.getRankManager().setRank(player.getUniqueId(), Rank.PLAYER, true);
         }
 
         ranks.getNametagManager().setNametags(player);
