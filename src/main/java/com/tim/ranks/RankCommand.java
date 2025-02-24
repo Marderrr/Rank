@@ -32,30 +32,30 @@ public class RankCommand implements CommandExecutor {
                             if (rank.name().equalsIgnoreCase(args[1])) {
                                 ranks.getRankManager().setRank(target.getUniqueId(), rank, false);
 
-                                player.sendMessage(ChatColor.GREEN + "You changed " + target.getName() + "'s rank to " + rank.getDisplay() + ChatColor.GREEN + "!");
+                                player.sendMessage(ranks.serverPrefix + ChatColor.GREEN + "Du hast den Rang von " + target.getName() + " auf " + rank.getDisplay() + ChatColor.GREEN + " gesetzt!");
 
                                 if (target.isOnline()) {
-                                    target.getPlayer().sendMessage(ChatColor.GREEN + "Your rank was set to " + rank.getDisplay() + ChatColor.GREEN + "!");
+                                    target.getPlayer().sendMessage(ranks.serverPrefix + ChatColor.GREEN + "Dein Rang wurde auf " + rank.getDisplay() + ChatColor.GREEN + " gesetzt!");
 
                                 }
 
                                 return false;
 
                             } else {
-                                player.sendMessage(ChatColor.RED + "You did no specify a valid rank!");
+                                player.sendMessage(ranks.serverPrefix + ChatColor.RED + "Kein valider Rang!");
                             }
                         }
 
                     } else {
-                        player.sendMessage(ChatColor.RED + "This user has never joined the server before!");
+                        player.sendMessage(ranks.serverPrefix + ChatColor.RED + "Dieser Spieler war noch nie auf dem Server!");
                     }
 
                 } else {
-                    player.sendMessage(ChatColor.RED + "Invalid usage! Please use /rank <player> <rank>");
+                    player.sendMessage(ranks.serverPrefix + ChatColor.RED + "Bitte benutze /rank <player> <rank>");
                 }
 
             } else {
-                player.sendMessage(ChatColor.RED + "You must be Operator to use this command!");
+                player.sendMessage(ranks.serverPrefix + ChatColor.RED + "Du hast keine Rechte dazu!");
             }
 
         }
