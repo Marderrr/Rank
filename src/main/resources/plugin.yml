@@ -1,0 +1,4 @@
+name: Rank
+version: '0.0.1'
+main: com.tim.rank.Rank
+api-version: '1.21'
