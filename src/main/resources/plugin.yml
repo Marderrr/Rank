@@ -1,4 +1,6 @@
-name: Rank
-version: '0.0.1'
-main: com.tim.rank.Rank
+name: Ranks
+version: '0.1.0'
+main: com.tim.ranks.Ranks
 api-version: '1.21'
+commands:
+  rank:
